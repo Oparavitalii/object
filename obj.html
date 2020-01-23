@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+</head>
+<body>
+	
+<div class="nic"></div>
+<div class="id"></div>
+<div class="tit"></div>
+<div class="body"></div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    	
+    	var json = {
+    		userId: "nic",
+    		id: 123,
+    		title: "json",
+    		body: "welcome"
+    	}
+    	var data = JSON.stringify(json);
+    	alert(data)
+    	var obj = JSON.parse(data);
+    	alert(obj.userId + "\r\n"+obj.id+ "\r\n"+obj.title+ "\r\n"+obj.body+ "\r\n")
+    	$(".nic").html(obj.userId)
+    	$(".id").html(obj.id)
+    	$(".tit").html(obj.title)
+    	$(".body").html(obj.body)
+
+
+
+    </script>
+</body>
+</html>
